@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input.showPicker() Example</title>
+  <base target="_blank">
+  <link rel="stylesheet" href="base-styles.css">
+</head>
+
+<body>
+  <h2>Attribute: Input.showPicker()</h2>
+  <label for="filePicker">Select a file:</label>
+  <input type="file" id="filePicker" name="filePicker" accept="image/*">
+  <button id="openPicker">Open File Picker</button>
+  <p class="note">You can now click the button to open the file selection menu instead of using the input.</p>
+
+  <section>
+    <h3>Useful Links:</h3>
+    <div><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_Input/showPicker">MDN Documentation</a></div>
+    <div><a href="https://www.w3schools.com/tags/att_input_showpicker.asp">w3schools Guide</a></div>
+  </section>
+
+  <script>
+    const fileInput = document.getElementById('filePicker');
+    const openPickerButton = document.getElementById('openPicker');
+
+    openPickerButton.addEventListener('click', () => {
+      if (fileInput.showPicker) {
+        fileInput.showPicker();
+      } else {
+        alert('This feature is not supported in your browser.');
+      }
+    });
+  </script>
+</body>
+
+</html>

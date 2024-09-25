@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Accordion Example</title>
+  <base target="_blank">
+  <link rel="stylesheet" href="base-styles.css">
+</head>
+
+<body>
+  <h2>Exclusive Accordion using <code>&lt;details&gt;</code></h2>
+  
+  <details open class="accordion">
+    <summary>Fruits</summary>
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+    </ul>
+  </details>
+  <p class="note">The <code>open</code> attribute makes this section initially visible to the user.</p>
+
+  <details name="test" class="accordion">
+    <summary>Vegetables</summary>
+    <ul>
+      <li>Carrot</li>
+      <li>Broccoli</li>
+      <li>Spinach</li>
+    </ul>
+  </details>
+
+  <details name="test" class="accordion">
+    <summary>Dairy Products</summary>
+    <ul>
+      <li>Milk</li>
+      <li>Cheese</li>
+      <li>Yogurt</li>
+    </ul>
+  </details>
+  <p class="note">The <code>name</code> attribute can be used for grouping purposes. The two groups above have the same <code>name</code>, so only 1 group can be open at a time</p>
+
+  <section>
+    <h3>Useful Links:</h3>
+    <div><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">MDN Documentation</a></div>
+    <div><a href="https://www.w3schools.com/tags/tag_details.asp">w3schools Guide</a></div>
+  </section>
+</body>
+
+</html>

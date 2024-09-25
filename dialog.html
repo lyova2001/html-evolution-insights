@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog Example</title>
+  <base target="_blank">
+  <link rel="stylesheet" href="base-styles.css">
+</head>
+
+<body>
+  <h2>Element: dialog</h2>
+  <button id="openDialog">Open Dialog</button>
+
+  <dialog id="myDialog">
+    <form method="dialog">
+      <h3>Dialog Title</h3>
+      <p>This is a simple dialog example.</p>
+      <button id="closeDialog">Close</button>
+      <button type="submit">Confirm</button>
+    </form>
+  </dialog>
+
+  <p class="note">Click the button to open the dialog, and use the buttons inside to close or confirm.</p>
+
+  <section>
+    <h3>Useful Links:</h3>
+    <div><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">MDN Documentation</a></div>
+    <div><a href="https://www.w3schools.com/tags/tag_dialog.asp">w3schools Guide</a></div>
+  </section>
+
+  <script>
+    const openDialogButton = document.getElementById('openDialog');
+    const myDialog = document.getElementById('myDialog');
+    const closeDialogButton = document.getElementById('closeDialog');
+
+    openDialogButton.addEventListener('click', () => {
+      myDialog.showModal();
+    });
+
+    closeDialogButton.addEventListener('click', () => {
+      myDialog.close();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Editable Example</title>
+  <base target="_blank">
+  <link rel="stylesheet" href="base-styles.css">
+</head>
+
+<body>
+  <h2>Attribute: contenteditable</h2>
+  <p contenteditable="true" id="editableParagraph">You can edit this text directly in the browser.</p>
+  <button id="saveButton">Save Changes</button>
+  <p class="note">You can click on the text to edit it, and then save your changes by clicking the button.</p>
+
+  <section>
+    <h3>Useful Links:</h3>
+    <div><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">MDN Documentation</a></div>
+    <div><a href="https://www.w3schools.com/tags/att_global_contenteditable.asp">w3schools Guide</a></div>
+  </section>
+
+  <script>
+    const saveButton = document.getElementById('saveButton');
+    const editableParagraph = document.getElementById('editableParagraph');
+
+    saveButton.addEventListener('click', () => {
+      alert('Saved content: ' + editableParagraph.innerText);
+    });
+  </script>
+</body>
+
+</html>
