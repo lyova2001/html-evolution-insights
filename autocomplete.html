@@ -11,9 +11,17 @@
 
 <body>
   <h2>Attribute 2: autocomplete</h2>
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="test" autocomplete="email">
-  <p class="note">Pay attention to the name of this input. Although the name is "test", since the autocomplete attribute is set to "email", the browser will offer to autocomplete as an email.</p>
+  <form>
+    <label for="recovery-email">Enter your recovery email</label>
+    <input
+      type="email"
+      id="recovery-email"
+      name="recoveryEmail"
+      autocomplete="email"
+      placeholder="yourname@example.com"
+      required
+    >
+  </form>
 
   <section>
     <h3>Useful Links:</h3>
